@@ -2,7 +2,7 @@ package RaisePig.characters;
 
 import RaisePig.ExampleMod;
 import RaisePig.Helper.ModHelper;
-import RaisePig.card.*;
+import RaisePig.card.common.*;
 import RaisePig.relics.MyRelic;
 import RaisePig.relics.RaisePigBook;
 import basemod.abstracts.CustomPlayer;
@@ -88,14 +88,14 @@ public class MyCharacter extends CustomPlayer {
         for (int x = 0; x<4; x++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(BuildupStrike.ID);
-        retVal.add(BuildupDefend.ID);
-//        retVal.add(SnackBribery.ID);
-//        retVal.add(SnackBribery.ID);
-//        retVal.add(SnackBribery.ID);
-//        retVal.add(SnackBribery.ID);
-//        retVal.add(AutumnHarvestUprising.ID);
-//        retVal.add(PigCharge.ID);
+        retVal.add(ChargeStrike.ID);
+        retVal.add(ChargeDefend.ID);
+//        retVal.add(TreatBribery.ID);
+//        retVal.add(TreatBribery.ID);
+//        retVal.add(TreatBribery.ID);
+//        retVal.add(TreatBribery.ID);
+//        retVal.add(HarvestUprising.ID);
+//        retVal.add(PigRush.ID);
         return retVal;
     }
 

@@ -2,7 +2,7 @@
   "RaisePig:RaisePigPower": {
     "NAME": "养猪",
     "DESCRIPTIONS": [
-      "每次恢复 [E] 时，有 #y%%%d 的概率增加1点 [E] 上限。战斗结束后重置。"
+      "每次恢复 [E] 时，有 #y%d%% 的概率增加1点 [E] 上限。战斗结束后重置。"
     ]
   },
   "RaisePig:FeedPower": {
@@ -15,6 +15,121 @@
     "NAME": "饲料借贷",
     "DESCRIPTIONS": [
       "下次打出 #y收获 牌时，失去 %d 点 [E] 上限和9点生命。"
+    ]
+  },
+  "RaisePig:FeedingFrenzyPower": {
+    "NAME": "疯狂投喂",
+    "DESCRIPTIONS": [
+      "本回合每次打出攻击牌时，额外 #y投喂 1。"
+    ]
+  },
+  "RaisePig:NextAttackFeedPower": {
+    "NAME": "投喂准备",
+    "DESCRIPTIONS": [
+      "你下一张攻击牌额外 #y投喂 ",
+      "。"
+    ]
+  },
+  "RaisePig:PigRestPower": {
+    "NAME": "猪息",
+    "DESCRIPTIONS": [
+      "若本回合未打出攻击牌，回合结束时获得 ",
+      " 层 #y养猪 。"
+    ]
+  },
+  "RaisePig:PigRestEnergyPower": {
+    "NAME": "猪息·发育",
+    "DESCRIPTIONS": [
+      "若本回合未打出攻击牌，回合结束时永久增加 1 点 [E] 上限。"
+    ]
+  },
+  "RaisePig:FatteningPower": {
+    "NAME": "催肥",
+    "DESCRIPTIONS": [
+      "本回合你的下一次 #y投喂 效果数量翻倍。"
+    ]
+  },
+  "RaisePig:BreedingSowPower": {
+    "NAME": "种猪培育",
+    "DESCRIPTIONS": [
+      "每当你 #y投喂 时，有 ",
+      "% 概率额外 #y投喂 1。"
+    ]
+  },
+  "RaisePig:PigCyclePower": {
+    "NAME": "猪周期",
+    "DESCRIPTIONS": [
+      "每当你的 [E] 上限增加时，抽 ",
+      " 张牌。"
+    ]
+  },
+  "RaisePig:FarmManagerPower": {
+    "NAME": "农场经理",
+    "DESCRIPTIONS": [
+      "每回合开始时，若你的 [E] 上限 ≥ ",
+      " ，获得 1 点 [E] 。"
+    ]
+  },
+  "RaisePig:PorkFuturesPower": {
+    "NAME": "猪肉期货",
+    "DESCRIPTIONS": [
+      "每当你使用 #y收获 牌时，获得 ",
+      " 点格挡。"
+    ]
+  },
+  "RaisePig:PrecisionFarmingPower": {
+    "NAME": "精细化养殖",
+    "DESCRIPTIONS": [
+      "你的 #y投喂 效果额外 #y投喂 ",
+      " 层。"
+    ]
+  },
+  "RaisePig:TruffleHunterPower": {
+    "NAME": "松露猎猪",
+    "DESCRIPTIONS": [
+      "每当你造成未被格挡的伤害时，#y投喂 1。",
+      "每当你造成伤害时，#y投喂 1。"
+    ]
+  },
+  "RaisePig:FarmerInstinctPower": {
+    "NAME": "养猪直觉",
+    "DESCRIPTIONS": [
+      "每当敌人的 #y投喂 达到 7 层时，你获得 ",
+      " 点格挡和 1 点 [E] 。"
+    ]
+  },
+  "RaisePig:PiganomicsPower": {
+    "NAME": "猪圈经济学",
+    "DESCRIPTIONS": [
+      "每当你 #y收获 时，获得 ",
+      " 金币。战斗结束时，每有 1 点 [E] 上限超过 3，获得 5 金币。"
+    ]
+  },
+  "RaisePig:PigKingBlessingPower": {
+    "NAME": "猪王祝福",
+    "DESCRIPTIONS": [
+      "每当你的 [E] 上限增加时，对所有敌人 #y投喂 ",
+      "。"
+    ]
+  },
+  "RaisePig:FullBarnPower": {
+    "NAME": "猪满为患",
+    "DESCRIPTIONS": [
+      "每当敌人的 #y投喂 达到 7 层时，抽 ",
+      " 张牌并获得 1 点 [E] 。"
+    ]
+  },
+  "RaisePig:PigTycoonPower": {
+    "NAME": "养猪大亨",
+    "DESCRIPTIONS": [
+      "每回合开始时，永久增加 1 点 [E] 上限。"
+    ]
+  },
+  "RaisePig:EternalFarmPower": {
+    "NAME": "永恒农场",
+    "DESCRIPTIONS": [
+      "每当你 #y收获 时，获得 ",
+      " 层 #y养猪 。"
     ]
   }
 }
