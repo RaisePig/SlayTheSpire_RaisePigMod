@@ -1,0 +1,133 @@
+{
+  "RaisePig:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:BuildupStrike": {
+    "NAME": "蓄力打击",
+    "DESCRIPTION": "获得 !M! 点 [E] 。 NL 造成 双倍 [E] 点伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] 。 NL 造成 四倍 [E] 点伤害。"
+  },
+  "RaisePig:BuildupDefend": {
+    "NAME": "蓄力防御",
+    "DESCRIPTION": "获得 !M! 点 [E] ， NL 获得 双倍 [E] 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] ， NL 获得 三倍 [E] 点格挡。"
+  },
+  "RaisePig:SlapAndDate": {
+    "NAME": "一巴掌一甜枣",
+    "DESCRIPTION": " raisepig:投喂 1。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:RaisePigPassword": {
+    "NAME": "养猪密码",
+    "DESCRIPTION": " raisepig:投喂 1。 NL 施加 !M! 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:DoubleSlapAndDate": {
+    "NAME": "两巴掌一甜枣",
+    "DESCRIPTION": " raisepig:投喂 1。 NL 造成 !M! 次 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:TripleSlapAndDate": {
+    "NAME": "三巴掌一甜枣",
+    "DESCRIPTION": " raisepig:投喂  !M! 。 NL 对所有敌人造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:PigDeadAndFixSty": {
+    "NAME": "亡猪补牢",
+    "DESCRIPTION": "清除目标所有 [#f1d6e5]投喂[] 。 NL 获得 !M! 倍点格挡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:Reclamation": {
+    "NAME": "垦荒",
+    "DESCRIPTION": "失去 !M! 层 [#f1d6e5]养猪[] 。 NL 根据 [#f1d6e5]养猪[] 层数概率对敌人造成 !D! 点伤害，否则对自己造成伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:FinancialManagement": {
+    "NAME": "理财",
+    "DESCRIPTION": "失去 !M! 点 [E] 上限。 NL 对所有敌人造成 !D! 点伤害。 NL 若 斩杀 ，则 [E] 变为3点。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:FatPigArchway": {
+    "NAME": "肥猪拱门",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若成功对敌人造成伤害，你获得1层 [#f1d6e5]养猪[] ，否则 raisepig:投喂 1。 NL 通过该卡牌获得的 [#f1d6e5]养猪[] 层数上限为4。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:SnackBribery": {
+    "NAME": "甜枣贿赂",
+    "DESCRIPTION": " raisepig:投喂 1。 NL 其本回合 力量 -99。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:AutumnHarvestUprising": {
+    "NAME": "秋收起义",
+    "DESCRIPTION": " raisepig:收获 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:IQuit": {
+    "NAME": "我不玩了",
+    "DESCRIPTION": " raisepig:收菜 。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:KillPigDay": {
+    "NAME": "丰收日",
+    "DESCRIPTION": " raisepig:收菜 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:DevelopIsImportant": {
+    "NAME": "发育才能干",
+    "DESCRIPTION": "只有 [E] 上限不小于10时才能打出。 NL 消耗一半 [E] 上限的 [E] ，对所有敌人造成 !M! 次 !D! 点伤害。 NL 若不足以消耗，则改为减少20点生命上限。",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["我的能量上限不足10点。"]
+  },
+  "RaisePig:CutChives": {
+    "NAME": "割韭菜",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若 斩杀 ，转移所有 [#f1d6e5]投喂[] 至随机敌人。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:PigNoseBump": {
+    "NAME": "猪鼻拱击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 [#f1d6e5]投喂[] 状态，获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:FeedSplash": {
+    "NAME": "饲料溅射",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 raisepig:投喂  *1 。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:PigstyReinforce": {
+    "NAME": "猪圈加固",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 若你有 [#f1d6e5]养猪[] 状态，额外获得 !M! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:FeedLoan": {
+    "NAME": "饲料借贷",
+    "DESCRIPTION": " raisepig:投喂 2。 NL 在本场战斗中，你下次 raisepig:收获 时，失去 !M! 点 [E] 上限和9点生命。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:PigCharge": {
+    "NAME": "猪突猛进",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 [#f1d6e5]投喂[] 状态，每层 [#f1d6e5]投喂[] 使此牌额外造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:TestPower1": {
+    "NAME": "测试能力1",
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:TestPower2": {
+    "NAME": "测试能力2",
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "RaisePig:TestPower3": {
+    "NAME": "测试能力3",
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
+  }
+}

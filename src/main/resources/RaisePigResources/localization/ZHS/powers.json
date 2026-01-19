@@ -1,0 +1,20 @@
+{
+  "RaisePig:RaisePigPower": {
+    "NAME": "养猪",
+    "DESCRIPTIONS": [
+      "每次恢复 [E] 时，有 #y%%%d 的概率增加1点 [E] 上限。战斗结束后重置。"
+    ]
+  },
+  "RaisePig:FeedPower": {
+    "NAME": "投喂",
+    "DESCRIPTIONS": [
+      "达到 #b7 层， #y收获 时清除所有 [#F1D6E5]投喂[] ，永久增加1点 [E] 上限。若达到 #b15 层，则 #y收获 时升级牌组的一张牌。"
+    ]
+  },
+  "RaisePig:FeedLoanPower": {
+    "NAME": "饲料借贷",
+    "DESCRIPTIONS": [
+      "下次打出 #y收获 牌时，失去 %d 点 [E] 上限和9点生命。"
+    ]
+  }
+}

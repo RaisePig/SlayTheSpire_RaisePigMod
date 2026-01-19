@@ -1,0 +1,16 @@
+{
+  "RaisePig:MyRelic": {
+    "NAME": "测试遗物",
+    "FLAVOR": "这个人很懒，什么都没写",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，抽 #b1 张牌。"
+    ]
+  },
+  "RaisePig:RaisePigBook": {
+    "NAME": "养猪秘籍",
+    "FLAVOR": "养猪的养猪秘籍，拥有它就拥有了财富密码。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #y3 层 [#F1D6E5]养猪[] 。"
+    ]
+  }
+}
