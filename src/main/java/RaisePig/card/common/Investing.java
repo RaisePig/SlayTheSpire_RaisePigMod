@@ -38,6 +38,6 @@ public class Investing extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new IncreaseMaxEnergyAction(1));
+        AbstractDungeon.player.energy.energy++;
     }
 }

@@ -1,7 +1,7 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import RaisePig.powers.FeedingFrenzyPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -42,7 +42,7 @@ public class FeedingFrenzy extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 投喂
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, this.magicNumber))
+                new FeedAction(m, p, this.magicNumber)
         );
         // 获得疯狂投喂效果（本回合每次打出攻击牌额外投喂1）
         AbstractDungeon.actionManager.addToBottom(

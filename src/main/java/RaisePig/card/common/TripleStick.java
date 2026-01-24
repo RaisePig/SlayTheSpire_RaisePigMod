@@ -1,9 +1,8 @@
 package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +28,7 @@ public class TripleStick extends CustomCard {
     public TripleStick() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = 4;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override
@@ -44,7 +43,7 @@ public class TripleStick extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, this.magicNumber))
+                new FeedAction(m, p, this.magicNumber)
         );
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(

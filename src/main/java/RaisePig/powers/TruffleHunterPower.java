@@ -1,8 +1,8 @@
 package RaisePig.powers;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.actions.FeedAction;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -49,9 +49,7 @@ public class TruffleHunterPower extends AbstractPower {
             // 升级版：造成伤害时触发；未升级版：造成未被格挡的伤害时触发
             if (upgraded || target.currentBlock < damageAmount) {
                 this.flash();
-                AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(target, this.owner, new FeedPower((AbstractMonster) target, this.amount))
-                );
+                AbstractDungeon.actionManager.addToBottom(new FeedAction(target, this.owner, this.amount));
             }
         }
     }

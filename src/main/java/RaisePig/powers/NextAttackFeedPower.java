@@ -1,8 +1,8 @@
 package RaisePig.powers;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.actions.FeedAction;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -44,7 +44,7 @@ public class NextAttackFeedPower extends AbstractPower {
             AbstractMonster target = AbstractDungeon.getRandomMonster();
             if (target != null) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(target, this.owner, new FeedPower(target, this.amount))
+                        new FeedAction(target, this.owner, this.amount)
                 );
             }
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));

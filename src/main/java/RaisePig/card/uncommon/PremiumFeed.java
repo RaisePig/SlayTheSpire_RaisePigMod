@@ -1,7 +1,7 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,7 +42,7 @@ public class PremiumFeed extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 投喂
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, this.magicNumber))
+                new FeedAction(m, p, this.magicNumber)
         );
         // 易伤
         AbstractDungeon.actionManager.addToBottom(

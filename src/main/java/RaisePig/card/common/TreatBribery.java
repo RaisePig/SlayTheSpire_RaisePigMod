@@ -1,6 +1,7 @@
 package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.actions.FeedAction;
 import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -29,6 +30,8 @@ public class TreatBribery extends CustomCard {
 
     public TreatBribery() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseBlock = this.block = 5;
     }
 
     @Override
@@ -36,19 +39,51 @@ public class TreatBribery extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBaseCost(1);
+            this.upgradeMagicNumber(2);
+            this.upgradeBlock(-2);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // cards.json:
+        // - 投喂 2
+        // - 目标本回合 力量 -!M!
+        // - 圈养 !B! ：额外 力量 -5
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, 1))
+                new FeedAction(m, p, 2)
         );
+
+        // 本回合临时减力量：Strength -X + GainStrength X（无人工制品时）
+        int strengthLoss = this.magicNumber;
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new StrengthPower(m, -99), -99, true, AbstractGameAction.AttackEffect.NONE)
+                new ApplyPowerAction(m, p, new StrengthPower(m, -strengthLoss), -strengthLoss, true, AbstractGameAction.AttackEffect.NONE)
         );
         if (!m.hasPower("Artifact")) {
-            addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, 99), 99, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(m, p, new GainStrengthPower(m, strengthLoss), strengthLoss, true, AbstractGameAction.AttackEffect.NONE)
+            );
         }
+
+        // 圈养：阈值使用 !B!（本卡 block 字段），满足则额外临时 -5 力量
+        final int enclosureThreshold = this.block;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (m != null && !m.isDeadOrEscaped()
+                        && m.hasPower(FeedPower.POWER_ID)
+                        && m.getPower(FeedPower.POWER_ID).amount >= enclosureThreshold) {
+                    AbstractDungeon.actionManager.addToTop(
+                            new ApplyPowerAction(m, p, new StrengthPower(m, -5), -5, true, AbstractGameAction.AttackEffect.NONE)
+                    );
+                    if (!m.hasPower("Artifact")) {
+                        AbstractDungeon.actionManager.addToTop(
+                                new ApplyPowerAction(m, p, new GainStrengthPower(m, 5), 5, true, AbstractGameAction.AttackEffect.NONE)
+                        );
+                    }
+                }
+                this.isDone = true;
+            }
+        });
     }
 }

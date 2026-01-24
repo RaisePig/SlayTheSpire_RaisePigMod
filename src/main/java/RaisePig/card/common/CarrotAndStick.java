@@ -1,10 +1,11 @@
 package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,23 +30,30 @@ public class CarrotAndStick extends CustomCard {
     public CarrotAndStick() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = 7;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(4);
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, 1))
-        );
+                new FeedAction(m, p, 1));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL))
-        );
+                new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
+        if (upgraded) {
+            addToBot(
+                    new LoseHPAction(m, p, magicNumber));
+            addToBot(
+                    new HealAction(p, p, magicNumber));
+        }
     }
 }

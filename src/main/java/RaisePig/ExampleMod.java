@@ -1,10 +1,8 @@
 package RaisePig;
 
-import RaisePig.card.common.*;
-import RaisePig.card.uncommon.*;
-import RaisePig.card.rare.*;
 import RaisePig.characters.MyCharacter;
 import RaisePig.relics.RaisePigBook;
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -47,95 +45,23 @@ public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber,
 
     @Override
     public void receiveEditCards() {
-        // ========== BASIC 卡牌 ==========
-        BaseMod.addCard(new Strike());
-        BaseMod.addCard(new Defend());
-        BaseMod.addCard(new ChargeStrike());
-        BaseMod.addCard(new ChargeDefend());
-        BaseMod.addCard(new CarrotAndStick());
+        // 自动导入 common 包中的卡牌
+        new AutoAdd("RaisePig")
+                .packageFilter("RaisePig.card.common")
+                .setDefaultSeen(true)
+                .cards();
         
-        // ========== COMMON 卡牌 ==========
-        BaseMod.addCard(new FarmingCode());
-        BaseMod.addCard(new DoubleStick());
-        BaseMod.addCard(new TripleStick());
-        BaseMod.addCard(new MendTheFold());
-        BaseMod.addCard(new TreatBribery());
-        BaseMod.addCard(new Reclamation());
-        BaseMod.addCard(new HarvestUprising());
-        BaseMod.addCard(new Investing());
-        BaseMod.addCard(new CashOut());
-        BaseMod.addCard(new LuckyPig());
-        BaseMod.addCard(new SlaughterDay());
-        BaseMod.addCard(new ScaleUp());
-        BaseMod.addCard(new PigRush());
-        BaseMod.addCard(new SnoutStrike());
-        BaseMod.addCard(new FeedSplash());
-        BaseMod.addCard(new Fleece());
-        BaseMod.addCard(new FortifySty());
-        BaseMod.addCard(new FeedLoan());
+        // 自动导入 uncommon 包中的卡牌
+        new AutoAdd("RaisePig")
+                .packageFilter("RaisePig.card.uncommon")
+                .setDefaultSeen(true)
+                .cards();
         
-        // ========== UNCOMMON 攻击牌 ==========
-        BaseMod.addCard(new BoarCharge());
-        BaseMod.addCard(new PiggyBankSmash());
-        BaseMod.addCard(new SlaughterSeason());
-        BaseMod.addCard(new FeedRecycle());
-        BaseMod.addCard(new Overfeeding());
-        BaseMod.addCard(new PorkChop());
-        BaseMod.addCard(new PigTailFlurry());
-        BaseMod.addCard(new MarketCrash());
-        BaseMod.addCard(new BlackHoofStrike());
-        BaseMod.addCard(new RootingStrike());
-        BaseMod.addCard(new FlyingPigStrike());
-        BaseMod.addCard(new PigRampage());
-        BaseMod.addCard(new BloodTusk());
-        BaseMod.addCard(new WrathOfPigKing());
-        
-        // ========== UNCOMMON 技能牌 ==========
-        BaseMod.addCard(new FeedingFrenzy());
-        BaseMod.addCard(new StyExpansion());
-        BaseMod.addCard(new FatAndStrong());
-        BaseMod.addCard(new HerdThePigs());
-        BaseMod.addCard(new PremiumFeed());
-        BaseMod.addCard(new Investment());
-        BaseMod.addCard(new PiggybackCharge());
-        BaseMod.addCard(new MudBath());
-        BaseMod.addCard(new ForagingPigs());
-        BaseMod.addCard(new FatteningPlan());
-        BaseMod.addCard(new SwineherdsWisdom());
-        BaseMod.addCard(new RestAndGrow());
-        BaseMod.addCard(new EmergencySlaughter());
-        BaseMod.addCard(new LardShield());
-        
-        // ========== UNCOMMON 能力牌 ==========
-        BaseMod.addCard(new BreedingSow());
-        BaseMod.addCard(new PigCycle());
-        BaseMod.addCard(new FarmManager());
-        BaseMod.addCard(new PorkFutures());
-        BaseMod.addCard(new PrecisionFarming());
-        BaseMod.addCard(new TruffleHunter());
-        BaseMod.addCard(new FarmerInstinct());
-        BaseMod.addCard(new Piganomics());
-        
-        // ========== RARE 攻击牌 ==========
-        BaseMod.addCard(new PigEmperor());
-        BaseMod.addCard(new InfiniteAppetite());
-        BaseMod.addCard(new AncestralPig());
-        BaseMod.addCard(new FinalHarvest());
-        BaseMod.addCard(new PiggedOut());
-        BaseMod.addCard(new OmnivorousRampage());
-        
-        // ========== RARE 技能牌 ==========
-        BaseMod.addCard(new GoldenPig());
-        BaseMod.addCard(new MassSlaughter());
-        BaseMod.addCard(new PiggyBankHeist());
-        BaseMod.addCard(new SupremeFeeder());
-        BaseMod.addCard(new PiggyBackup());
-        
-        // ========== RARE 能力牌 ==========
-        BaseMod.addCard(new PigKingBlessing());
-        BaseMod.addCard(new FullBarn());
-        BaseMod.addCard(new PigTycoon());
-        BaseMod.addCard(new EternalFarm());
+        // 自动导入 rare 包中的卡牌
+        new AutoAdd("RaisePig")
+                .packageFilter("RaisePig.card.rare")
+                .setDefaultSeen(true)
+                .cards();
     }
 
     @Override

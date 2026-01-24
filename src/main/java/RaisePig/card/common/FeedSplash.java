@@ -1,9 +1,8 @@
 package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,7 +41,7 @@ public class FeedSplash extends CustomCard {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.isDeadOrEscaped()) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(mo, p, new FeedPower(mo, this.magicNumber))
+                        new FeedAction(mo, p, this.magicNumber)
                 );
             }
         }

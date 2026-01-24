@@ -1,10 +1,9 @@
 package RaisePig.card.rare;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -56,7 +55,7 @@ public class OmnivorousRampage extends CustomCard {
                             AbstractGameAction.AttackEffect.SLASH_HORIZONTAL)
             );
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(m, p, new FeedPower(m, 2))
+                    new FeedAction(m, p, 2)
             );
         }
     }

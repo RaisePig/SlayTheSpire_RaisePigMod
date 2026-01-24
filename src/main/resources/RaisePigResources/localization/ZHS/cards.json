@@ -1,201 +1,250 @@
 {
   "RaisePig:Strike": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:ChargeStrike": {
     "NAME": "蓄力打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:ChargeDefend": {
     "NAME": "蓄力防御",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:CarrotAndStick": {
     "NAME": "一巴掌一甜枣",
-    "DESCRIPTION": " raisepig:投喂 1。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": " raisepig:投喂 1。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": " raisepig:投喂 1。 NL 造成 !D! 点伤害。 NL 偷取 !M! 点生命。"
   },
   "RaisePig:FarmingCode": {
     "NAME": "养猪密码",
-    "DESCRIPTION": "获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:DoubleStick": {
     "NAME": "两巴掌一甜枣",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 2 次 !D! 点伤害。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 2 次 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:TripleStick": {
     "NAME": "三巴掌一甜枣",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 3 次 !D! 点伤害。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 3 次 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:MendTheFold": {
     "NAME": "亡猪补牢",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:Reclamation": {
     "NAME": "垦荒",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:收获 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:收获 。 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:收获 。"
   },
   "RaisePig:Investing": {
     "NAME": "理财",
-    "DESCRIPTION": "永久增加 1 点 [E] 上限。 NL 消耗 。"
+    "DESCRIPTION": "本场战斗中增加 1 点 [E] 上限。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:LuckyPig": {
     "NAME": "肥猪拱门",
-    "DESCRIPTION": "获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !M! 层 raisepig:养猪 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 raisepig:养猪 。 NL 恢复 raisepig:养猪 层数的生命。 NL  消耗 。"
   },
   "RaisePig:TreatBribery": {
     "NAME": "甜枣贿赂",
-    "DESCRIPTION": " raisepig:投喂 1。 NL 目标本回合 力量 -99。"
+    "DESCRIPTION": " raisepig:投喂 2。 NL 目标本回合 力量 - !M! 。 NL  raisepig:圈养  !B! ：额外 力量 -5。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:HarvestUprising": {
     "NAME": "秋收起义",
-    "DESCRIPTION": " raisepig:收获 。 NL 消耗 。"
+    "DESCRIPTION": " raisepig:收获 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " raisepig:收获 。 NL raisepig:出栏 。 NL 消耗 。"
   },
   "RaisePig:CashOut": {
     "NAME": "收菜",
-    "DESCRIPTION": " raisepig:收菜 。"
+    "DESCRIPTION": " raisepig:收菜 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:SlaughterDay": {
     "NAME": "丰收日",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:收获 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:收获 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:收获 。 NL raisepig:屠宰 ：增加2点生命上限。"
   },
   "RaisePig:ScaleUp": {
     "NAME": "规模化",
-    "DESCRIPTION": " raisepig:投喂 !M! 。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:Fleece": {
     "NAME": "薅羊毛",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 抽 !M! 张牌。 NL raisepig:催肥 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 抽 !M! 张牌。 NL raisepig:催肥 2次。"
   },
   "RaisePig:SnoutStrike": {
     "NAME": "猪鼻拱击",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FeedSplash": {
     "NAME": "饲料溅射",
-    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。"
+    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FortifySty": {
     "NAME": "猪圈加固",
-    "DESCRIPTION": "获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:圈养 总数7：额外获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:圈养 总数5：额外获得 !B! 点格挡。"
   },
   "RaisePig:FeedLoan": {
     "NAME": "饲料借贷",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 你下次 raisepig:收获 时，失去 1 点 [E] 上限和9点生命。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 你下次 raisepig:收获 时，失去一半 [E] 上限和 !D! 点生命。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PigRush": {
     "NAME": "猪突猛进",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": " 消耗 。 NL  raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
-
+  
   "RaisePig:BoarCharge": {
     "NAME": "野猪冲撞",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标有 raisepig:投喂 ，再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:圈养 1：再造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 总是再造成 !D! 点伤害。"
   },
   "RaisePig:PiggyBankSmash": {
     "NAME": "碎猪存钱罐",
-    "DESCRIPTION": "消耗 。 NL 失去 1 点 [E] 上限。 NL 造成 !D! 点伤害。抽 2 张牌。"
+    "DESCRIPTION": "消耗 。 NL 失去 1 点 [E] 上限。 NL 造成 !D! 点伤害。抽 2 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:SlaughterSeason": {
     "NAME": "宰杀季",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:屠宰 ：获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:屠宰 ：获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FeedRecycle": {
     "NAME": "饲料回收",
-    "DESCRIPTION": "造成等同于目标 raisepig:投喂 层数 !M! 倍的伤害。 NL 移除目标一半 raisepig:投喂 。"
+    "DESCRIPTION": "造成等同于目标 raisepig:投喂 层数 !M! 倍的伤害。 NL 移除目标一半 raisepig:投喂 。 NL raisepig:屠宰 ：抽 2 张牌。",
+    "UPGRADE_DESCRIPTION": "造成等同于目标 raisepig:投喂 层数 !M! 倍的伤害。 NL 移除目标一半 raisepig:投喂 。 NL raisepig:屠宰 ：抽 3 张牌。"
   },
   "RaisePig:Overfeeding": {
     "NAME": "撑死你",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。 NL 若目标 raisepig:投喂 ≥12层，其获得 2 层 虚弱 。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。 NL raisepig:圈养 12：其获得 2 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": " raisepig:投喂 !M! 。 NL 造成 !D! 点伤害。 NL raisepig:圈养 10：其获得 2 层 虚弱 。"
   },
   "RaisePig:PorkChop": {
     "NAME": "猪排斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:圈养 5：再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:圈养 5：再造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:圈养 3：再造成 !D! 点伤害。"
   },
   "RaisePig:PigTailFlurry": {
     "NAME": "猪尾连鞭",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每次命中后 raisepig:投喂 1。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每次命中后 raisepig:投喂 1。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:MarketCrash": {
     "NAME": "猪市崩盘",
-    "DESCRIPTION": "消耗 。 NL raisepig:出栏 ：对所有有 raisepig:投喂 的敌人造成其 raisepig:投喂 层数 !M! 倍的伤害。 NL 清除所有 raisepig:投喂 。"
+    "DESCRIPTION": "消耗 。 NL raisepig:出栏 ：对所有有 raisepig:投喂 的敌人造成其 raisepig:投喂 层数 !M! 倍的伤害。 NL 清除所有 raisepig:投喂 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:BlackHoofStrike": {
     "NAME": "黑猪掌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你的 [E] 上限 ≥5，额外造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你的 [E] 上限 ≥5，额外造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:RootingStrike": {
     "NAME": "拱地觅食",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你有 raisepig:养猪 状态，获得等同于 raisepig:养猪 层数的 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你有 raisepig:养猪 状态，获得等同于 raisepig:养猪 层数的 [E] 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FlyingPigStrike": {
     "NAME": "飞猪突袭",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若你的 [E] 上限 ≥6，此牌不再 虚无 。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 若你的 [E] 上限 ≥6，此牌不再 虚无 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PigRampage": {
     "NAME": "猪突猛击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中，每使用一次 raisepig:收获 ，此牌伤害永久+3。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗中，每使用一次 raisepig:收获 ，此牌伤害永久+3。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:BloodTusk": {
     "NAME": "嗜血獠牙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 3 点生命。 NL raisepig:投喂 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 3 点生命。 NL raisepig:投喂 !M! 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:WrathOfPigKing": {
     "NAME": "猪王之怒",
-    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 每次命中后 raisepig:投喂 1。"
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。 NL 每次命中后 raisepig:投喂 1。",
+    "UPGRADE_DESCRIPTION": ""
   },
 
   "RaisePig:FeedingFrenzy": {
     "NAME": "疯狂投喂",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 本回合每次打出攻击牌时，额外 raisepig:投喂 1。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 本回合每次打出攻击牌时，额外 raisepig:投喂 1。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:StyExpansion": {
     "NAME": "猪圈扩建",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FatAndStrong": {
     "NAME": "膘肥体壮",
-    "DESCRIPTION": "获得等同于目标 raisepig:投喂 层数 !M! 倍的格挡。"
+    "DESCRIPTION": "获得等同于目标 raisepig:投喂 层数 !M! 倍的格挡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:HerdThePigs": {
     "NAME": "赶猪入圈",
-    "DESCRIPTION": "将目标身上所有 raisepig:投喂 转移到随机另一敌人身上。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "将目标身上所有 raisepig:投喂 转移到随机另一敌人身上。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PremiumFeed": {
     "NAME": "优质饲料",
-    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 对目标施加 易伤 。"
+    "DESCRIPTION": " raisepig:投喂 !M! 。 NL 对目标施加 易伤 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:Investment": {
     "NAME": "投资理财",
-    "DESCRIPTION": "固有 。 NL 若你的 [E] 上限 >3，获得 !M! 点 [E] 。 NL 否则，获得 1 层 raisepig:养猪 。"
+    "DESCRIPTION": "固有 。 NL 若你的 [E] 上限 >3，获得 !M! 点 [E] 。 NL 否则，获得 1 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PiggybackCharge": {
     "NAME": "骑猪冲锋",
-    "DESCRIPTION": "获得 !M! 点 [E] 。 NL 你下一张攻击牌额外 raisepig:投喂 2。"
+    "DESCRIPTION": "获得 !M! 点 [E] 。 NL 你下一张攻击牌额外 raisepig:投喂 2。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:MudBath": {
     "NAME": "泥潭浴",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:猪息 ：获得 1 层 raisepig:养猪 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL raisepig:猪息 ：获得 1 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:ForagingPigs": {
     "NAME": "放猪觅食",
-    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。 NL 抽 1 张牌。"
+    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FatteningPlan": {
     "NAME": "催肥计划",
-    "DESCRIPTION": "本回合你的下一次 raisepig:投喂 效果 raisepig:催肥 （数量翻倍）。 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "本回合你的下一次 raisepig:投喂 效果 raisepig:催肥 （数量翻倍）。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:SwineherdsWisdom": {
     "NAME": "猪倌的智慧",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 若你的 [E] 上限 ≥6，额外抽 1 张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若你的 [E] 上限 ≥6，额外抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:RestAndGrow": {
     "NAME": "养精蓄锐",
-    "DESCRIPTION": "保留 。 NL 获得 !B! 点格挡。 NL raisepig:猪息 ：永久增加 1 点 [E] 上限。"
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点格挡。 NL raisepig:猪息 ：永久增加 1 点 [E] 上限。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:EmergencySlaughter": {
     "NAME": "紧急出栏",
@@ -204,28 +253,34 @@
   },
   "RaisePig:LardShield": {
     "NAME": "猪脂护盾",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有 1 点 [E] 上限，额外获得 1 点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有 1 点 [E] 上限，额外获得 1 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
   },
 
   "RaisePig:BreedingSow": {
     "NAME": "种猪培育",
-    "DESCRIPTION": "每当你 raisepig:投喂 时，有 !M!% 概率额外 raisepig:投喂 1。"
+    "DESCRIPTION": "每当你 raisepig:投喂 时，有 !M!% 概率额外 raisepig:投喂 1。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PigCycle": {
     "NAME": "猪周期",
-    "DESCRIPTION": "每当你的 [E] 上限增加时，抽 !M! 张牌。"
+    "DESCRIPTION": "每当你的 [E] 上限增加时，抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FarmManager": {
     "NAME": "农场经理",
-    "DESCRIPTION": "每回合开始时，若你的 [E] 上限 ≥ !M! ，获得 1 点 [E] 。"
+    "DESCRIPTION": "每回合开始时，若你的 [E] 上限 ≥ !M! ，获得 1 点 [E] 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PorkFutures": {
     "NAME": "猪肉期货",
-    "DESCRIPTION": "每当你使用 raisepig:收获 牌时，获得 !M! 点格挡。"
+    "DESCRIPTION": "每当你使用 raisepig:收获 牌时，获得 !M! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PrecisionFarming": {
     "NAME": "精细化养殖",
-    "DESCRIPTION": "你的 raisepig:投喂 效果额外 raisepig:投喂 !M! 层。"
+    "DESCRIPTION": "你的 raisepig:投喂 效果额外 raisepig:投喂 !M! 层。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:TruffleHunter": {
     "NAME": "松露猎猪",
@@ -234,24 +289,29 @@
   },
   "RaisePig:FarmerInstinct": {
     "NAME": "养猪直觉",
-    "DESCRIPTION": "每当敌人的 raisepig:投喂 达到 7 层时，你获得 !M! 点格挡和 1 点 [E] 。"
+    "DESCRIPTION": "每当敌人的 raisepig:投喂 达到 7 层时，你获得 !M! 点格挡和 1 点 [E] 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:Piganomics": {
     "NAME": "猪圈经济学",
-    "DESCRIPTION": "每当你 raisepig:收获 时，获得 !M! 金币。 NL 战斗结束时，每有 1 点 [E] 上限超过 3，获得 5 金币。"
+    "DESCRIPTION": "每当你 raisepig:收获 时，获得 !M! 金币。 NL 战斗结束时，每有 1 点 [E] 上限超过 3，获得 5 金币。",
+    "UPGRADE_DESCRIPTION": ""
   },
 
   "RaisePig:TestPower1": {
     "NAME": "测试能力1",
-    "DESCRIPTION": "测试用能力卡。"
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:TestPower2": {
     "NAME": "测试能力2",
-    "DESCRIPTION": "测试用能力卡。"
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:TestPower3": {
     "NAME": "测试能力3",
-    "DESCRIPTION": "测试用能力卡。"
+    "DESCRIPTION": "测试用能力卡。",
+    "UPGRADE_DESCRIPTION": ""
   },
 
   "RaisePig:GoldenPig": {
@@ -261,7 +321,8 @@
   },
   "RaisePig:PigEmperor": {
     "NAME": "猪帝降临",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 raisepig:投喂 ≥15层，伤害翻倍。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 raisepig:投喂 ≥15层，伤害翻倍。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:MassSlaughter": {
     "NAME": "大规模出栏",
@@ -270,15 +331,18 @@
   },
   "RaisePig:PigKingBlessing": {
     "NAME": "猪王祝福",
-    "DESCRIPTION": "每当你的 [E] 上限增加时，对所有敌人 raisepig:投喂 !M! 。"
+    "DESCRIPTION": "每当你的 [E] 上限增加时，对所有敌人 raisepig:投喂 !M! 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:InfiniteAppetite": {
     "NAME": "无尽食欲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:投喂 等同于造成的伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL raisepig:投喂 等同于造成的伤害。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FullBarn": {
     "NAME": "猪满为患",
-    "DESCRIPTION": "每当敌人的 raisepig:投喂 达到 7 层时，抽 !M! 张牌并获得 1 点 [E] 。"
+    "DESCRIPTION": "每当敌人的 raisepig:投喂 达到 7 层时，抽 !M! 张牌并获得 1 点 [E] 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PiggyBankHeist": {
     "NAME": "猪仔银行劫案",
@@ -287,34 +351,42 @@
   },
   "RaisePig:AncestralPig": {
     "NAME": "祖传猪法",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你有 raisepig:养猪 状态，伤害翻倍。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若你有 raisepig:养猪 状态，伤害翻倍。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PigTycoon": {
     "NAME": "养猪大亨",
-    "DESCRIPTION": "每回合开始时，永久增加 1 点 [E] 上限。"
+    "DESCRIPTION": "每回合开始时，永久增加 1 点 [E] 上限。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:FinalHarvest": {
     "NAME": "终极丰收",
-    "DESCRIPTION": "对所有敌人造成伤害，伤害值等于所有敌人 raisepig:投喂 层数之和的 !M! 倍。 NL 清除所有 raisepig:投喂 。 NL 消耗 。"
+    "DESCRIPTION": "对所有敌人造成伤害，伤害值等于所有敌人 raisepig:投喂 层数之和的 !M! 倍。 NL 清除所有 raisepig:投喂 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:EternalFarm": {
     "NAME": "永恒农场",
-    "DESCRIPTION": "每当你 raisepig:收获 时，获得 !M! 层 raisepig:养猪 。"
+    "DESCRIPTION": "每当你 raisepig:收获 时，获得 !M! 层 raisepig:养猪 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:SupremeFeeder": {
     "NAME": "饲料霸主",
-    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。 NL 获得 !B! 点格挡。"
+    "DESCRIPTION": "对所有敌人 raisepig:投喂 !M! 。 NL 获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PiggedOut": {
     "NAME": "猪吃撑了",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 raisepig:投喂 ≥7层，伤害×3。 NL 若 raisepig:投喂 ≥15层，伤害×5。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若目标 raisepig:投喂 ≥7层，伤害×3。 NL 若 raisepig:投喂 ≥15层，伤害×5。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:PiggyBackup": {
     "NAME": "猪队友",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有 1 点 [E] 上限超过 3，额外获得 3 点格挡、抽 1 张牌、获得 1 点 [E] 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有 1 点 [E] 上限超过 3，额外获得 3 点格挡、抽 1 张牌、获得 1 点 [E] 。",
+    "UPGRADE_DESCRIPTION": ""
   },
   "RaisePig:OmnivorousRampage": {
     "NAME": "杂食狂暴",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每次命中后 raisepig:投喂 2。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每次命中后 raisepig:投喂 2。",
+    "UPGRADE_DESCRIPTION": ""
   }
 }

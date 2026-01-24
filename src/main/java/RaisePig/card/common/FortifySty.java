@@ -1,7 +1,10 @@
 package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,10 +25,12 @@ public class FortifySty extends CustomCard {
     private static final CardColor COLOR = RaisePigPink;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
+    private static final int ENCLOSURE_THRESHOLD = 7;
+    private static final int UPGRADED_ENCLOSURE_THRESHOLD = 5;
 
     public FortifySty() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.block = this.baseBlock = 12;
+        this.block = this.baseBlock = 9;
     }
 
     @Override
@@ -34,10 +39,32 @@ public class FortifySty extends CustomCard {
             this.upgradeName();
             this.upgradeBlock(4);
         }
+        this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // 基础格挡
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+
+        // cards.json：圈养 总数X（按全场投喂总和判定），满足则额外获得 !B! 点格挡
+        final int threshold = this.upgraded ? UPGRADED_ENCLOSURE_THRESHOLD : ENCLOSURE_THRESHOLD;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                int totalFeed = 0;
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (!mo.isDeadOrEscaped() && mo.hasPower(FeedPower.POWER_ID)) {
+                        totalFeed += mo.getPower(FeedPower.POWER_ID).amount;
+                    }
+                }
+                if (totalFeed >= threshold) {
+                    AbstractDungeon.actionManager.addToTop(
+                            new GainBlockAction(p, p, block));
+                }
+                this.isDone = true;
+            }
+        });
     }
 }

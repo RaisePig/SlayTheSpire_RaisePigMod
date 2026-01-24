@@ -1,9 +1,8 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -47,7 +46,7 @@ public class PigTailFlurry extends CustomCard {
                     new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL))
             );
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(m, p, new FeedPower(m, 1))
+                    new FeedAction(m, p, 1)
             );
         }
     }

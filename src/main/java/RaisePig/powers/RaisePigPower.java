@@ -2,7 +2,6 @@ package RaisePig.powers;
 
 import RaisePig.Helper.ModHelper;
 import RaisePig.actions.IncreaseMaxEnergyAction;
-import basemod.patches.com.megacrit.cardcrawl.core.EnergyManager.PostEnergyRechargeHook;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,6 +19,8 @@ public class RaisePigPower extends AbstractPower {
     private static final String NAME = powerStrings.NAME;
     // 能力的描述
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    // 层数上限
+    private static final int MAX_STACKS = 10;
 
     public RaisePigPower(AbstractCreature owner, int Amount) {
         this.name = NAME;
@@ -27,8 +28,8 @@ public class RaisePigPower extends AbstractPower {
         this.owner = owner;
         this.type = PowerType.BUFF;
 
-        // 如果需要不能叠加的能力，只需将上面的Amount参数删掉，并把下面的Amount改成-1就行
-        this.amount = Amount;
+        // 限制层数不超过上限
+        this.amount = Math.min(Amount, MAX_STACKS);
 
         // 添加一大一小两张能力图
         String path128 = "RaisePigResources/img/powers/Example84.png";
@@ -37,6 +38,13 @@ public class RaisePigPower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
 
         // 首次添加能力更新描述
+        this.updateDescription();
+    }
+    
+    // 重写stackPower方法，限制叠加时不超过上限
+    @Override
+    public void stackPower(int stackAmount) {
+        this.amount = Math.min(this.amount + stackAmount, MAX_STACKS);
         this.updateDescription();
     }
 

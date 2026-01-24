@@ -1,9 +1,8 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
-import RaisePig.powers.FeedPower;
+import RaisePig.actions.FeedAction;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -51,7 +50,7 @@ public class BloodTusk extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 3));
         // 投喂2
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, this.magicNumber))
+                new FeedAction(m, p, this.magicNumber)
         );
     }
 }

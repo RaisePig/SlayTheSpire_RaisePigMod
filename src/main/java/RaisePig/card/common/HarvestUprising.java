@@ -2,9 +2,11 @@ package RaisePig.card.common;
 
 import RaisePig.Helper.ModHelper;
 import RaisePig.actions.HarvestAction;
+import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -33,10 +35,21 @@ public class HarvestUprising extends CustomCard {
             this.upgradeName();
             this.upgradeBaseCost(1);
         }
+        this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HarvestAction(m, p));
+        
+        // 升级后：出栏效果，对所有有投喂的敌人收获
+        if (this.upgraded) {
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!mo.isDeadOrEscaped() && mo != m && mo.hasPower(FeedPower.POWER_ID)) {
+                    addToBot(new HarvestAction(mo, p));
+                }
+            }
+        }
     }
 }

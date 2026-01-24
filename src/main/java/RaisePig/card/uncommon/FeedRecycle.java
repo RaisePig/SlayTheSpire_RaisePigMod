@@ -5,6 +5,7 @@ import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,6 +32,9 @@ public class FeedRecycle extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 3;
     }
+    
+    private static final int SLAUGHTER_REWARD = 2;
+    private static final int UPGRADED_SLAUGHTER_REWARD = 3;
 
     @Override
     public void upgrade() {
@@ -60,6 +64,21 @@ public class FeedRecycle extends CustomCard {
                                 new ReducePowerAction(m, p, FeedPower.POWER_ID, reduceAmount)
                         );
                     }
+                }
+                this.isDone = true;
+            }
+        });
+        
+        // 屠宰：若目标本回合死亡，抽牌
+        final int reward = this.upgraded ? UPGRADED_SLAUGHTER_REWARD : SLAUGHTER_REWARD;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                // 延迟检查，等待伤害结算
+                if (m.isDead || m.currentHealth <= 0) {
+                    AbstractDungeon.actionManager.addToTop(
+                            new DrawCardAction(p, reward)
+                    );
                 }
                 this.isDone = true;
             }

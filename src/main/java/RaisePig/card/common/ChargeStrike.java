@@ -39,6 +39,7 @@ public class ChargeStrike extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(3);
+            this.upgradeMagicNumber(1);
         }
     }
 

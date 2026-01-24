@@ -25,6 +25,7 @@ public class PorkChop extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int ENCLOSURE_THRESHOLD = 5;
+    private static final int UPGRADED_ENCLOSURE_THRESHOLD = 3;
 
     public PorkChop() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -45,8 +46,9 @@ public class PorkChop extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL))
         );
-        // 圈养5：再造成一次伤害
-        if (m.hasPower(FeedPower.POWER_ID) && m.getPower(FeedPower.POWER_ID).amount >= ENCLOSURE_THRESHOLD) {
+        // 圈养：再造成一次伤害（升级后阈值降低）
+        int threshold = this.upgraded ? UPGRADED_ENCLOSURE_THRESHOLD : ENCLOSURE_THRESHOLD;
+        if (m.hasPower(FeedPower.POWER_ID) && m.getPower(FeedPower.POWER_ID).amount >= threshold) {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL))
             );

@@ -37,6 +37,7 @@ public class ChargeDefend extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBlock(3);
+            this.upgradeMagicNumber(1);
         }
     }
 

@@ -1,10 +1,10 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.actions.FeedAction;
 import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -62,7 +62,7 @@ public class HerdThePigs extends CustomCard {
                     if (!otherMonsters.isEmpty()) {
                         AbstractMonster target = otherMonsters.get(AbstractDungeon.cardRandomRng.random(otherMonsters.size() - 1));
                         AbstractDungeon.actionManager.addToTop(
-                                new ApplyPowerAction(target, p, new FeedPower(target, feedAmount))
+                                new FeedAction(target, p, feedAmount)
                         );
                         AbstractDungeon.actionManager.addToTop(
                                 new RemoveSpecificPowerAction(m, p, FeedPower.POWER_ID)

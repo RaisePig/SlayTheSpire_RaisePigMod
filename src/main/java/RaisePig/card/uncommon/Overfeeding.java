@@ -1,10 +1,10 @@
 package RaisePig.card.uncommon;
 
 import RaisePig.Helper.ModHelper;
+import RaisePig.actions.FeedAction;
 import RaisePig.powers.FeedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -33,6 +33,9 @@ public class Overfeeding extends CustomCard {
         this.damage = this.baseDamage = 7;
         this.magicNumber = this.baseMagicNumber = 4;
     }
+    
+    private static final int ENCLOSURE_THRESHOLD = 12;
+    private static final int UPGRADED_ENCLOSURE_THRESHOLD = 10;
 
     @Override
     public void upgrade() {
@@ -47,19 +50,20 @@ public class Overfeeding extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 投喂
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new FeedPower(m, this.magicNumber))
+                new FeedAction(m, p, this.magicNumber)
         );
         // 造成伤害
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL))
         );
-        // 检查投喂是否>=12层
+        // 圈养：检查投喂是否达到阈值
+        final int threshold = this.upgraded ? UPGRADED_ENCLOSURE_THRESHOLD : ENCLOSURE_THRESHOLD;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {
-                if (m.hasPower(FeedPower.POWER_ID) && m.getPower(FeedPower.POWER_ID).amount >= 12) {
+                if (m.hasPower(FeedPower.POWER_ID) && m.getPower(FeedPower.POWER_ID).amount >= threshold) {
                     AbstractDungeon.actionManager.addToTop(
-                            new ApplyPowerAction(m, p, new WeakPower(m, 2, false))
+                            new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(m, p, new WeakPower(m, 2, false))
                     );
                 }
                 this.isDone = true;

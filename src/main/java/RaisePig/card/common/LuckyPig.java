@@ -27,6 +27,7 @@ public class LuckyPig extends CustomCard {
     public LuckyPig() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1;
+        this.exhaust = true;
     }
 
     @Override
@@ -35,12 +36,31 @@ public class LuckyPig extends CustomCard {
             this.upgradeName();
             this.upgradeMagicNumber(1);
         }
+        this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new RaisePigPower(p, this.magicNumber))
-        );
+                new ApplyPowerAction(p, p, new RaisePigPower(p, this.magicNumber)));
+        // cards.json 升级描述：恢复 raisepig:养猪 层数的生命
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.AbstractGameAction() {
+                @Override
+                public void update() {
+                    int healAmt = 0;
+                    if (p.hasPower(RaisePigPower.POWER_ID)) {
+                        healAmt = p.getPower(RaisePigPower.POWER_ID).amount;
+                    }
+                    if (healAmt > 0) {
+                        AbstractDungeon.actionManager.addToTop(
+                                new com.megacrit.cardcrawl.actions.common.HealAction(p, p, healAmt)
+                        );
+                    }
+                    this.isDone = true;
+                }
+            });
+        }
     }
 }
